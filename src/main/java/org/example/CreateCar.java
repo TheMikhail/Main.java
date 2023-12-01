@@ -7,7 +7,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 
 public class CreateCar {
 
@@ -56,24 +58,15 @@ public class CreateCar {
 
             JsonNode jsonNode = objectMapper.readTree(new File(fileName));
             JsonNode jsonValues = jsonNode.get("Машины 1990-х годов");
-            // System.out.println(jsonValues);
 
-        //JsonNode CarValues = jsonValues.get(0);
-            String CarKeyMark = jsonValues.get(0).fieldNames().next();//марка
-            String CarKeyMarket = jsonValues.get(0).fieldNames().next();//страна произоводитель
-            String CarKeyBody = jsonValues.get(0).fieldNames().next();//тип кузова
-            String CarKeyFuel = jsonValues.get(0).fieldNames().next();//тип топлива
-            String CarKeyGearbox = jsonValues.get(0).fieldNames().next();//тип КПП
+            JsonNode CarValue = jsonValues.get(0);
+            Iterator<String> CarKey = CarValue.fieldNames();
 
-            // вывод ключа и значения по индексу указанному в get(0)
-            //System.out.println("1 машина: " + CarValues.get("Марка").asText());
-            //System.out.println("Ключ: " + CarKeyMark);
-
-
-            // если мне нужно вывести конкретное значение объекта
-            // System.out.println("First car mark: " + Car.get("mark").asText());
-            // вывод элемента массива с номером указанным в get(0)
-            // System.out.println("First car mark: " + Car.toString());
+            String CarKeyMark = CarKey.next();//марка
+            String CarKeyMarket = CarKey.next();//страна произоводитель
+            String CarKeyBody = CarKey.next();//тип кузова
+            String CarKeyFuel = CarKey.next();//тип топлива
+            String CarKeyGearbox = CarKey.next();//тип КПП
 
 
             ObjectNode objectNode = (ObjectNode) jsonNode;
@@ -103,20 +96,20 @@ public class CreateCar {
                 switch (keyBody) {
                     case 1:
                         newObjectNode.put(CarKeyBody, "Седан");
-
+                        objectMapper.writeValue(new File(fileName),jsonNode);
                         break;
                     case 2:
 
                         newObjectNode.put(CarKeyBody, "Микроавтобус");
-
+                        objectMapper.writeValue(new File(fileName),jsonNode);
                         break;
                     case 3:
                         newObjectNode.put(CarKeyBody, "Купэ");
-
+                        objectMapper.writeValue(new File(fileName),jsonNode);
                         break;
                     case 4:
                         newObjectNode.put(CarKeyBody, "Универсал");
-
+                        objectMapper.writeValue(new File(fileName),jsonNode);
                         break;
                     default:
                         System.out.println("Вы ввели неверное значение меню...\n");
@@ -129,12 +122,12 @@ public class CreateCar {
             switch (keyFuel) {
                 case 1:
                     newObjectNode.put(CarKeyFuel, "Бензин");
-
+                    objectMapper.writeValue(new File(fileName),jsonNode);
                     break;
                 case 2:
 
                     newObjectNode.put(CarKeyFuel, "Дизель");
-
+                    objectMapper.writeValue(new File(fileName),jsonNode);
                     break;
                 default:
                     System.out.println("Вы ввели неверное значение меню...\n");
@@ -148,12 +141,12 @@ public class CreateCar {
             switch (keyGearbox) {
                 case 1:
                     newObjectNode.put(CarKeyGearbox, "МКПП");
-
+                    objectMapper.writeValue(new File(fileName),jsonNode);
                     break;
                 case 2:
 
                     newObjectNode.put(CarKeyGearbox, "АКПП");
-
+                    objectMapper.writeValue(new File(fileName),jsonNode);
                     break;
                 default:
                     System.out.println("Вы ввели неверное значение меню...\n");

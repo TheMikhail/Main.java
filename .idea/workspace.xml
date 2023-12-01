@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a2869ec-eda9-4c74-ba81-1d47d23b2ca3" name="Changes" comment="AI" />
+    <list default="true" id="9a2869ec-eda9-4c74-ba81-1d47d23b2ca3" name="Changes" comment="AI lab">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CreateCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CreateCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CarTest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CarTest.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,14 +72,35 @@
       <option name="project" value="LOCAL" />
       <updated>1701453375228</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="AI lab">
+      <created>1701453647523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701453647523</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AI" />
-    <option name="LAST_COMMIT_MESSAGE" value="AI" />
+    <MESSAGE value="AI lab" />
+    <option name="LAST_COMMIT_MESSAGE" value="AI lab" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/CreateCar.java</url>
+          <line>53</line>
+          <properties class="org.example.CreateCar" method="newCar">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.example.Gas" memberName="sedan" />
